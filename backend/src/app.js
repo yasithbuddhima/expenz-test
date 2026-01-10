@@ -1,0 +1,18 @@
+const express = require("express");
+const cors = require("cors");
+const authMiddleware = require("./middleware/authMiddleware");
+
+const authRoutes = require("./routes/auth.routes");
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+app.use("/api/auth/", authRoutes);
+
+app.get("/", authMiddleware, (req, res) => {
+  res.json({ message: "Backend is working on port 5000" });
+});
+
+module.exports = app;
