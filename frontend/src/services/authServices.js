@@ -11,7 +11,7 @@ import {
   GithubAuthProvider,
 } from "firebase/auth";
 
-const API_BASE = process.env.REACT_APP_API_URL;
+const API_BASE = process.env.BACKEND_API_BASE;
 // Email + Password SignUp
 export async function signUpWithEmail(email, password) {
   try {
