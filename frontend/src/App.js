@@ -3,7 +3,6 @@ import { RouterProvider } from "react-router-dom";
 import router from "./Router/Router";
 // To run front end
 // npm start
-// Test change
 
 function App() {
   const [message, setMessage] = useState();
